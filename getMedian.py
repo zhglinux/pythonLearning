@@ -6,6 +6,8 @@ This is a temporary script file.
 """
 
 import  sys
+import  numpy as np
+
 
 
 def get_median(data):
@@ -15,6 +17,15 @@ def get_median(data):
     # print data[half]
     # print data[~half]
     return (data[half] + data[~half]) / 2
+
+l0 = [1,2,2,2,2,3,3,3,3,3,3,3,3,3,4,4,4,5,5,6,7,8,9,10,11,12,13];
+
+print  get_median(l0)
+print  np.mean(l0)
+print  np.median(l0)
+arr = np.array(l0)
+print  np.bincount(arr)
+
 
 
 l1 = [58350, 63120, 44640, 56380, 72250];
