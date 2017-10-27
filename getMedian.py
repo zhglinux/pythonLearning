@@ -47,4 +47,65 @@ print l4
 
 print "hello world"
 
+print '=--------1------->'
+
+l100 = [33219, 36254, 38801,46335,46840,47596,55130,56863,78070,88830]
+av100 = np.mean(l100)
+print  av100
+
+print '=---------2------>'
+l101 = []
+for num in l100:
+    l101.append(num-av100)
+    print  num-av100
+
+print '=-------3-------->'
+avl101 = np.mean(l101)
+print  avl101
+
+okl101 = []
+for num in  l101:
+    if num < 0:
+        okl101.append(-num)
+    else:
+        okl101.append(num)
+
+print okl101
+print '=-------4-------->'
+print np.mean(okl101)
+print '=-------5-------->'
+
+sql103 = []
+for num  in  l101:
+    sql103.append(np.square(num))
+    print  np.square(num)
+
+print  np.mean(sql103)
+
+nor103 = np.mean(sql103)
+
+print  np.sqrt(nor103)
+
+snd1 = [38946,43420,49191,50430,50557,52580,53595,54135,60181,62076]
+
+def get_standard_deviation(data):
+    ave = np.mean(data)
+    da2 = []
+    for num in data:
+        tmp =np.square(num - ave)
+        da2.append(tmp)
+
+    ave2 = np.mean(da2)
+
+    sqr = np.sqrt(ave2)
+
+    return  sqr
+
+print  get_standard_deviation(snd1)
+
+snd2 = [18,21,18,20,23,15,17,22,21]
+print  get_standard_deviation(snd2)
+
+
+
 
